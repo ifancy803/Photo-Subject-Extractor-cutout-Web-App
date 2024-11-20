@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo" 
+      class="page">
+    <ActionBar title="Photo Subject Extractor" class="action-bar" />
+    
+    <GridLayout rows="*, auto, auto" class="p-10">
+        <Image id="mainImage" 
+               row="0" 
+               stretch="aspectFit" 
+               tap="{{ onImageTap }}"
+               longPress="{{ onImageLongPress }}" />
+        
+        <Label row="1" 
+               text="Long press on the image to extract the subject" 
+               textWrap="true"
+               class="hint" 
+               textAlignment="center" 
+               margin="10" />
+               
+        <GridLayout row="2" columns="*, *" class="actions">
+            <Button text="Select Photo" 
+                    tap="{{ onSelectPhoto }}" 
+                    class="btn btn-primary" />
+            <Button col="1" 
+                    text="Save Subject" 
+                    tap="{{ onSaveSubject }}" 
+                    class="btn btn-secondary"
+                    isEnabled="{{ hasExtractedSubject }}" />
+        </GridLayout>
+    </GridLayout>
+</Page>

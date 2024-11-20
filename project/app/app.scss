@@ -1,0 +1,22 @@
+@import '@nativescript/theme/core';
+@import '@nativescript/theme/default';
+
+.page {
+    background-color: #f0f0f0;
+}
+
+.btn {
+    margin: 5;
+    padding: 10;
+    border-radius: 5;
+}
+
+.btn-primary {
+    background-color: #007AFF;
+    color: white;
+}
+
+.action-bar {
+    background-color: #007AFF;
+    color: white;
+}
